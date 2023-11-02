@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: DBT_Connect
+    database: raw-data-403622
+    tables:
+      - name: CountryISO3
