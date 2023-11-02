@@ -1,3 +1,5 @@
+{{ config(materialized="table") }}
+
 select
     country_name,
     country_code_2_letter,
