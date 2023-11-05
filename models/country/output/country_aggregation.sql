@@ -1,5 +1,3 @@
-{{ config(materialized="table") }}
-
 select distinct region, count(*) as region_count
-from {{ source("DBT_Connect", "CountryISO3") }}
+from {{ ref("stg_country_transformed") }}
 group by region

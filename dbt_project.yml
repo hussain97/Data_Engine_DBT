@@ -38,8 +38,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   country:
     staging:
-      dataset: country
-      materialized: table
-    output:
-      dataset: country
+      dataset: dbt_hmoftah
       materialized: ephemeral
+    output:
+      dataset: dbt_hmoftah
+      materialized: table
