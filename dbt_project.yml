@@ -36,10 +36,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
-  country:
-    staging:
-      dataset: dbt_hmoftah
-      materialized: ephemeral
-    output:
-      dataset: dbt_hmoftah
-      materialized: table
+  admin_maturity:
+    country:
+      output:
+        +materialized: table
+      staging:
+        +materialized: ephemeral
