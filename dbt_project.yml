@@ -40,5 +40,7 @@ models:
     country:
       staging:
         +materialized: ephemeral
+        +schema: country
       output:
         +materialized: table
+        +schema: country
