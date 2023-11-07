@@ -35,12 +35,17 @@ clean-targets:         # directories to be removed by `dbt clean`
 # continue to be built as views. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 
+
 models:
   admin_maturity:
+    +persist_docs:
+      relation: true 
+      columns: true
+
     country:
       staging:
-        +materialized: ephemeral
-        +schema: country
+        materialized: ephemeral
+        dataset: country
       output:
-        +materialized: table
-        +schema: country
+        materialized: table
+        dataset: country
