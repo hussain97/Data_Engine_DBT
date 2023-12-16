@@ -49,3 +49,8 @@ models:
       output:
         materialized: table
         dataset: country
+
+    netflix_report_dataset:
+      output:
+        materialized: table
+        dataset: netflix_report_dataset
