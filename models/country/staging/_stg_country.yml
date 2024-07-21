@@ -4,3 +4,7 @@ version: 2
 models:
     - name: stg_country_transformed
       description: "The transformed country data"
+      columns:
+            - name: region
+              tests:
+                - not null
