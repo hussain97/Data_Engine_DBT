@@ -4,3 +4,7 @@ version: 2
 models:
     - name: country_aggregation
       description: "Number of countries per region"
+      columns:
+            - name: region
+              tests:
+                - not null
